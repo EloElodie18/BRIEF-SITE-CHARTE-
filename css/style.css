@@ -13,6 +13,7 @@
   margin-left: 18%;
 }
 
+<<<<<<< HEAD
 .button {
   background-color: yellow;
   border: none;
@@ -25,3 +26,14 @@
   margin-right: 20%;
   margin-top: 10%;
 }
+=======
+.box {
+  background-color: rgb(7, 113, 113);
+  background-size: auto;
+  border: solid 1px rgb(0, 0, 0);
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 5%;
+  display: block;
+}
+>>>>>>> 6a8cb2c60b57919419a5405fb02e357d86d59cfb
