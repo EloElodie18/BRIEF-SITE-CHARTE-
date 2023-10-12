@@ -1,3 +1,12 @@
+.bandeau {
+  position: fixed;
+  height: 100px;
+  text-align: center;
+  font-size: 40px;
+  box-shadow: 10px 5px rgb(164, 159, 159);
+  background-color: red;
+}
+
 .box {
   background-color: rgb(7, 113, 113);
   background-size: auto;
