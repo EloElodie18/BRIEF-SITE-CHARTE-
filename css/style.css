@@ -1,18 +1,51 @@
-.bandeau {
+header {
   position: fixed;
   height: 100px;
-  text-align: center;
+  width: 100%;
   font-size: 40px;
   box-shadow: 10px 5px rgb(164, 159, 159);
   background-color: red;
+  z-index: 1;
 }
 
 .box {
-  background-color: rgb(7, 113, 113);
-  background-size: auto;
   border: solid 1px rgb(0, 0, 0);
   margin-top: 10%;
   margin-bottom: 10%;
   padding: 5%;
   display: block;
+  box-shadow: 5px 5px 10px 0px;
+  border-radius: 2%;
+}
+.pad {
+  padding-top: 120px;
+}
+.flexbox {
+  display: flex;
+}
+.test {
+  flex-direction: column;
+  width: 50%;
+  min-width: 300px;
+}
+.test2 {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+ul {
+  list-style-image: url("../images/bullet.png");
+}
+
+h1 {
+  font-size: xx-large;
+}
+button {
+  background-color: indianred;
+  color: white;
 }
