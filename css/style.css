@@ -1,47 +1,41 @@
-.bandeau {
-  display: block;
+header {
   position: fixed;
   width: 100%;
   height: 60px;
-  text-align: center;
   font-size: 40px;
-  box-shadow: 0px 5px rgb(164, 159, 159);
+  box-shadow: 5px 5px rgb (164, 159, 159);
   background-color: white;
   z-index: 1;
   font-weight: bold;
-  margin-right: 100%;
-  margin-left: 18%;
 }
 
 .box {
-  border: solid 1px rgb(0, 0, 0);
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 7%;
   padding: 5%;
-  display: block;
-  box-shadow: 5px 5px 10px 0px;
+  box-shadow: 1px 12px 15px 0px rgba(0, 0, 0, 0.355);
   border-radius: 2%;
+  min-width: 250px;
 }
 .pad {
-  padding-top: 120px;
+  padding-top: 80px;
 }
 .flexbox {
   display: flex;
 }
-.test {
+.flex_column {
   flex-direction: column;
   width: 50%;
-  min-width: 300px;
+  min-width: 250px;
 }
-.test2 {
+.weaper {
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   width: 80%;
   position: relative;
   max-width: 960px;
+  min-width: 300px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 ul {
   list-style-image: url("../images/bullet.png");
@@ -53,4 +47,31 @@ h1 {
 button {
   background-color: indianred;
   color: white;
+}
+
+.buttonEnd {
+  justify-content: center;
+}
+
+.buttonOne {
+  justify-content: end;
+  min-width: 250px;
+  width: 30%;
+}
+
+.test {
+  border: inset 1px red;
+}
+
+@media (max-width: 960px) {
+  .weaper {
+    flex-direction: column;
+  }
+  .buttonOne {
+    justify-content: center;
+    width: 100%;
+  }
+  .flex_column {
+    width: 100%;
+  }
 }
