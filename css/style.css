@@ -27,7 +27,7 @@
 }
 
 .flexbox {
-  /*contenant de la charte*/
+  /*pour mettre un element en flexbox*/
   display: flex;
 }
 
