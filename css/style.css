@@ -1,28 +1,38 @@
 header {
   position: fixed;
   width: 100%;
-  height: 60px;
-  font-size: 40px;
-  box-shadow: 5px 5px rgb (164, 159, 159);
+  height: 50px;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 0px 2px 12px 0px;
   background-color: white;
   z-index: 1;
   font-weight: bold;
+  margin-right: 100%;
+  margin-left: 0%;
 }
 
 .box {
+  /*contenant des articles*/
   margin-bottom: 7%;
   padding: 5%;
   box-shadow: 1px 12px 15px 0px rgba(0, 0, 0, 0.355);
   border-radius: 2%;
   min-width: 250px;
 }
+
 .pad {
-  padding-top: 80px;
+  /*contener contient bouton haut*/
+  padding-top: 120px;
 }
+
 .flexbox {
+  /*contenant de la charte*/
   display: flex;
 }
+
 .flex_column {
+  /*h1 avec le p*/
   flex-direction: column;
   width: 50%;
   min-width: 250px;
@@ -37,6 +47,7 @@ header {
   min-width: 300px;
   margin: 0 auto;
 }
+
 ul {
   list-style-image: url("../images/bullet.png");
 }
@@ -44,6 +55,7 @@ ul {
 h1 {
   font-size: xx-large;
 }
+
 button {
   background-color: indianred;
   color: white;
@@ -57,10 +69,6 @@ button {
   justify-content: end;
   min-width: 250px;
   width: 30%;
-}
-
-.test {
-  border: inset 1px red;
 }
 
 @media (max-width: 960px) {
