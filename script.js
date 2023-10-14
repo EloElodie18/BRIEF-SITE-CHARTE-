@@ -32,9 +32,11 @@ function randomApprenant() {
 button.onclick = () => {
   // Appelle la fonction pour choisir un apprenant aléatoire
   randomApprenant();
+  button.classList.add("glitch");
   // Réinitialise le texte du bouton après 3 secondes
   setTimeout(() => {
     button.innerHTML = originalText;
+    button.classList.remove("glitch");
   }, 3000);
 };
 
@@ -59,3 +61,41 @@ for (let i = 0; i < toggleButtons.length; i++) {
     }
   });
 }
+
+// Tableau de liens vers les GIFs aléatoires
+const gifs = [
+  "./gifs/full.gif",
+  "./gifs/anime-kawaii.gif",
+  "./gifs/deeb7.gif",
+  "./gifs/93ec4.gif",
+  "./gifs/5709.gif",
+  "./gifs/awhiskeraway-anime.gif",
+  "./gifs/a-whisker-away-cat.gif",
+  "./gifs/Qalh.gif",
+  "./gifs/4cb8.gif",
+  "./gifs/cc6148.gif",
+  "./gifs/2225df9.gif",
+  "./gifs/photofunky.gif",
+  "./gifs/5aeo.gif",
+  "./gifs/30777.gif",
+  "./gifs/1082151.gif",
+  "./gifs/d68.gif",
+  "./gifs/6839.gif",
+  "./gifs/500.gif",
+  // Ajoutez autant de liens que vous le souhaitez
+];
+
+// Fonction pour changer le GIF aléatoire
+function changeRandomGif() {
+  const randomGif = document.getElementById("randomGif");
+  const randomIndex = random(gifs);
+  const randomGifUrl = gifs[randomIndex];
+  randomGif.setAttribute("src", randomGifUrl);
+  randomGif.style.display = "block"; // Affiche l'image
+  setTimeout(function () {
+    randomGif.scrollIntoView({ behavior: "smooth" }); // Fait défiler la page jusqu'à l'image en douceur
+  }, 500);
+}
+
+const randomButton = document.getElementById("randomButton");
+randomButton.addEventListener("click", changeRandomGif);

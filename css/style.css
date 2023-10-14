@@ -65,7 +65,7 @@ h1 {
 }
 
 button {
-  background-color: rgb(188, 40, 40);
+  background-color: #bc2828;
   color: white;
 }
 
@@ -90,6 +90,52 @@ body {
 
 .show-list {
   display: block;
+}
+
+#randomGif {
+  display: none;
+}
+
+.gif {
+  justify-content: center;
+}
+
+.glitch {
+  animation: glitch 2.5s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes glitch {
+  0% {
+    transform: skew(0deg);
+    scale: 1;
+    background: #bc2828;
+  }
+  20% {
+    transform: skew(5deg);
+    scale: 1.2;
+    background: #971d1d;
+  }
+  40% {
+    transform: skew(-5deg);
+    scale: 1.3;
+    background: #0ad50a;
+  }
+  60% {
+    transform: skew(5deg);
+    scale: 1;
+    background: #0808c7;
+  }
+  80% {
+    transform: skew(-5deg);
+    scale: 1.3;
+    background: #e306e3;
+  }
+  100% {
+    transform: skew(0deg);
+    scale: 1;
+    background: #bc2828;
+  }
 }
 
 @media (max-width: 960px) {
