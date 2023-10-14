@@ -55,6 +55,12 @@ for (let i = 0; i < toggleButtons.length; i++) {
     ) {
       // Si c'est le cas, la rendre visible (display: block)
       toggleLists[i].style.display = "block";
+      setTimeout(function () {
+        toggleLists[i].scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        }); // Fait défiler la page en douceur
+      }, 500);
     } else {
       // Sinon, la cacher à nouveau (display: none)
       toggleLists[i].style.display = "none";
@@ -82,7 +88,6 @@ const gifs = [
   "./gifs/d68.gif",
   "./gifs/6839.gif",
   "./gifs/500.gif",
-  // Ajoutez autant de liens que vous le souhaitez
 ];
 
 // Fonction pour changer le GIF aléatoire
