@@ -77,7 +77,7 @@ for (let i = 0; i < toggleButtons.length; i++) {
               top: window.scrollY - (bandeau.clientHeight + 25),
               behavior: "smooth",
             });
-          }, 400);
+          }, 500);
         } else {
           toggleLists[i].scrollIntoView({
             behavior: "smooth",
