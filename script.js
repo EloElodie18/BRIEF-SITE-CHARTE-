@@ -33,7 +33,6 @@ function randomApprenant() {
   const randomIndex = random(apprenants);
   button.innerText = apprenants[randomIndex];
   gateway = apprenants[randomIndex];
-  console.log(gateway);
 }
 
 // Clic sur le bouton
