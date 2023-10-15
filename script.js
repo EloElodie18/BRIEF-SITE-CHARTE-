@@ -1,3 +1,14 @@
+//Fonctions Utilitaires
+// ==========================================================
+
+// Fonction pour obtenir un index aléatoire
+function random(arr) {
+  return Math.floor(Math.random() * arr.length);
+}
+
+//Gestion du Bouton Aléatoire
+// ==========================================================
+
 // Sélectionne le bouton dans le DOM
 const button = document.querySelector(".btn");
 
@@ -17,11 +28,6 @@ const apprenants = [
 
 let originalText = button.innerHTML; // Sauvegarde de l'état initial
 
-// Fonction pour obtenir un index aléatoire
-function random(arr) {
-  return Math.floor(Math.random() * arr.length);
-}
-
 // Fonction pour choisir un apprenant aléatoire et mettre à jour le texte du bouton
 function randomApprenant() {
   const randomIndex = random(apprenants);
@@ -40,11 +46,15 @@ button.onclick = () => {
   }, 3000);
 };
 
+//Gestion des Listes Cachées/Affichées
+// ==========================================================
+
 // Sélectionner tous les titres
 const toggleButtons = document.querySelectorAll(".toggle-button");
 // Sélectionner toutes les listes à cacher/afficher
 const toggleLists = document.querySelectorAll(".toggle-list");
-
+// Sélectionner le beaudeau
+const bandeau = document.querySelector(".bandeau");
 // Parcourir chaque paire titre-liste
 for (let i = 0; i < toggleButtons.length; i++) {
   toggleButtons[i].addEventListener("click", () => {
@@ -56,10 +66,23 @@ for (let i = 0; i < toggleButtons.length; i++) {
       // Si c'est le cas, la rendre visible (display: block)
       toggleLists[i].style.display = "block";
       setTimeout(function () {
-        toggleLists[i].scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-        }); // Fait défiler la page en douceur
+        if (window.innerWidth <= 768) {
+          toggleButtons[i].scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+          setTimeout(function () {
+            window.scroll({
+              top: window.scrollY - (bandeau.clientHeight + 25),
+              behavior: "smooth",
+            });
+          }, 400);
+        } else {
+          toggleLists[i].scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        } // Fait défiler la page en douceur
       }, 500);
     } else {
       // Sinon, la cacher à nouveau (display: none)
@@ -67,6 +90,9 @@ for (let i = 0; i < toggleButtons.length; i++) {
     }
   });
 }
+
+//"Le Coin des GIFs Magiques
+// ==========================================================
 
 // Tableau de liens vers les GIFs aléatoires
 const gifs = [
