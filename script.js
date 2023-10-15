@@ -5,7 +5,7 @@
 function random(arr) {
   return Math.floor(Math.random() * arr.length);
 }
-
+let gateway;
 //Gestion du Bouton Aléatoire
 // ==========================================================
 
@@ -32,6 +32,7 @@ let originalText = button.innerHTML; // Sauvegarde de l'état initial
 function randomApprenant() {
   const randomIndex = random(apprenants);
   button.innerText = apprenants[randomIndex];
+  gateway = randomIndex;
 }
 
 // Clic sur le bouton
@@ -111,9 +112,15 @@ const gifs = [
   "./gifs/5aeo.gif",
   "./gifs/30777.gif",
   "./gifs/1082151.gif",
+];
+
+const hermione = [
   "./gifs/d68.gif",
-  "./gifs/6839.gif",
   "./gifs/500.gif",
+  "./gifs/6839.gif",
+  "./gifs/b7d2e.gif",
+  "./gifs/hermione-granger-wand.gif",
+  "./gifs/tm5o.gif",
 ];
 
 // Fonction pour changer le GIF aléatoire
@@ -121,7 +128,11 @@ function changeRandomGif() {
   const randomGif = document.getElementById("randomGif");
   const randomIndex = random(gifs);
   const randomGifUrl = gifs[randomIndex];
-  randomGif.setAttribute("src", randomGifUrl);
+  if (gateway == 3) {
+    randomGif.setAttribute("src", hermione[random(hermione)]);
+  } else {
+    randomGif.setAttribute("src", randomGifUrl);
+  }
   randomGif.style.display = "block"; // Affiche l'image
   setTimeout(function () {
     randomGif.scrollIntoView({ behavior: "smooth" }); // Fait défiler la page jusqu'à l'image en douceur
