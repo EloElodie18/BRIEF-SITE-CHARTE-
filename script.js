@@ -32,7 +32,8 @@ let originalText = button.innerHTML; // Sauvegarde de l'état initial
 function randomApprenant() {
   const randomIndex = random(apprenants);
   button.innerText = apprenants[randomIndex];
-  gateway = randomIndex;
+  gateway = apprenants[randomIndex];
+  console.log(gateway);
 }
 
 // Clic sur le bouton
@@ -128,7 +129,7 @@ function changeRandomGif() {
   const randomGif = document.getElementById("randomGif");
   const randomIndex = random(gifs);
   const randomGifUrl = gifs[randomIndex];
-  if (gateway == 3) {
+  if (gateway == "Kriss") {
     randomGif.setAttribute("src", hermione[random(hermione)]);
   } else {
     randomGif.setAttribute("src", randomGifUrl);
