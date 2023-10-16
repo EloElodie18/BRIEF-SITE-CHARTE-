@@ -18,7 +18,7 @@ const apprenants = [
   "Audrey",
   "Manue",
   "Kriss",
-  "Sévrine",
+  "Séverine",
   "Martin",
   "Virand",
   "Idris",
