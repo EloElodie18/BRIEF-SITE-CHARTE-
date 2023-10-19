@@ -5,10 +5,10 @@
 function random(arr) {
   return Math.floor(Math.random() * arr.length);
 }
-let gateway;
+
 //Gestion du Bouton Aléatoire
 // ==========================================================
-
+let gateway;
 // Sélectionne le bouton dans le DOM
 const button = document.querySelector(".btn");
 
@@ -112,6 +112,9 @@ const gifs = [
   "./gifs/5aeo.gif",
   "./gifs/30777.gif",
   "./gifs/1082151.gif",
+  "./gifs/PvWQ.gif",
+  "./gifs/chat-dodo.gif",
+  "./gifs/ZNKq.gif",
 ];
 
 const hermione = [
