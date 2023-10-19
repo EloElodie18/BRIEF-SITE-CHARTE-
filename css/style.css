@@ -1,14 +1,12 @@
-.bandeau {
-  position: fixed;
-  width: 100%;
-  height: 50px;
-  font-size: 28px;
-  text-align: center;
-  box-shadow: 0px 2px 12px 0px;
+header {
+  position: sticky;
+  left: 0;
+  top: 0;
   background-color: white;
+  font-size: 28px;
+  box-shadow: 1px 12px 15px 0px rgba(0, 0, 0, 0.355);
+  height: 2em;
   z-index: 1;
-  font-weight: bold;
-  text-indent: -38%;
 }
 
 .box {
@@ -29,7 +27,7 @@ h2 {
 
 .pad {
   /*contener contient bouton haut*/
-  padding-top: 120px;
+  padding-top: 5em;
 }
 
 .flexbox {
@@ -152,11 +150,10 @@ body {
     width: 100%;
   }
 
-  .bandeau {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  header {
     font-size: 22px;
-    text-indent: 0%;
+  }
+  .pad {
+    padding-top: 2em;
   }
 }
