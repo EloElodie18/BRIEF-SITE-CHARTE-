@@ -168,6 +168,12 @@ body {
   }
 }
 
+@media (max-width: 580px) {
+  img {
+    width: 90%;
+  }
+}
+
 @media (max-width: 340px) {
   header {
     font-size: small;

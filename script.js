@@ -94,36 +94,39 @@ for (let i = 0; i < toggleButtons.length; i++) {
 
 //"Le Coin des GIFs Magiques
 // ==========================================================
-
+//gif plus petit pour mobile
+function Mobile() {
+  return window.innerWidth <= 540 ? `/reduce` : "";
+}
 // Tableau de liens vers les GIFs aléatoires
 const gifs = [
-  "./gifs/full.gif",
-  "./gifs/anime-kawaii.gif",
+  `./gifs${Mobile()}/full.gif`,
+  `./gifs${Mobile()}/anime-kawaii.gif`,
   "./gifs/deeb7.gif",
   "./gifs/93ec4.gif",
-  "./gifs/5709.gif",
-  "./gifs/awhiskeraway-anime.gif",
-  "./gifs/a-whisker-away-cat.gif",
-  "./gifs/Qalh.gif",
+  `./gifs${Mobile()}/5709.gif`,
+  `./gifs${Mobile()}/awhiskeraway-anime.gif`,
+  `./gifs${Mobile()}/a-whisker-away-cat.gif`,
+  `./gifs${Mobile()}/Qalh.gif`,
   "./gifs/4cb8.gif",
-  "./gifs/cc6148.gif",
-  "./gifs/2225df9.gif",
-  "./gifs/photofunky.gif",
-  "./gifs/5aeo.gif",
+  `./gifs${Mobile()}/cc6148.gif`,
+  `./gifs${Mobile()}/2225df9.gif`,
+  `./gifs${Mobile()}/photofunky.gif`,
+  `./gifs${Mobile()}/5aeo.gif`,
   "./gifs/30777.gif",
-  "./gifs/1082151.gif",
-  "./gifs/PvWQ.gif",
-  "./gifs/chat-dodo.gif",
-  "./gifs/ZNKq.gif",
+  `./gifs${Mobile()}/1082151.gif`,
+  `./gifs${Mobile()}/PvWQ.gif`,
+  `./gifs${Mobile()}/chat-dodo.gif`,
+  `./gifs${Mobile()}/ZNKq.gif`,
 ];
 
 const hermione = [
-  "./gifs/d68.gif",
-  "./gifs/500.gif",
-  "./gifs/6839.gif",
-  "./gifs/b7d2e.gif",
-  "./gifs/hermione-granger-wand.gif",
-  "./gifs/tm5o.gif",
+  `./gifs${Mobile()}/d68.gif`,
+  `./gifs${Mobile()}/500.gif`,
+  `./gifs${Mobile()}/6839.gif`,
+  `./gifs${Mobile()}/b7d2e.gif`,
+  `./gifs${Mobile()}/hermione-granger-wand.gif`,
+  `./gifs${Mobile()}/tm5o.gif`,
 ];
 
 // Fonction pour changer le GIF aléatoire
